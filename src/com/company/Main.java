@@ -6,27 +6,27 @@ public class Main {
 
     public static void main(String[] args)
     {
-        System.out.println("Please Choose either user guessing game or computer guessing game.");
-        System.out.println("Enter 'User' for user guessing game, 'Computer' for computer guessing game");
-        Scanner choice = new Scanner(System.in);
+        System.out.println("Please Choose either user guessing game or computer guessing game."); //Greeting
+        System.out.println("Enter 'User' for user guessing game, 'Computer' for computer guessing game");  //Greeting
+        Scanner choice = new Scanner(System.in); //input
         String game = choice.nextLine().toLowerCase();
-        if(game.equals("computer"))
+        System.out.println("Please Enter the lower number");  //setting
+        int lower = choice.nextInt();
+        System.out.println("Please Enter the higher number");  //setting
+        int higher = choice.nextInt();
+	if(game.equals("computer"))
         {
-            System.out.println("Please Enter the lower number");
-            int lower = choice.nextInt();
-            System.out.println("Please Enter the higher number");
-            int higher = choice.nextInt();
             guessAI(lower, higher);
         }
         else if(game.equals("user"))
         {
-            randomNumGen();
+            randomNumGen(lower, higher);
         }
     }
 
-    public static void randomNumGen() {
+    public static void randomNumGen(int lower, int higher) {
         System.out.println("Game Begin");
-        int rand = (int) (Math.random() * 100);
+        int rand = (int) (Math.random() * higher) + lower;
         System.out.println("Guess a number from 0 - 100");
         Scanner guess = new Scanner(System.in);
         while ((guess.nextInt() != rand)) {
