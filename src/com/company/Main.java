@@ -6,14 +6,14 @@ public class Main {
 
     public static void main(String[] args)
     {
-        System.out.println("Please Choose either user guessing game or computer guessing game."); //Greeting
-        System.out.println("Enter 'User' for user guessing game, 'Computer' for computer guessing game");  //Greeting
-        Scanner choice = new Scanner(System.in); //input
-        String game = choice.nextLine().toLowerCase();
-        System.out.println("Please Enter the lower number");  //setting
-        int lower = choice.nextInt();
-        System.out.println("Please Enter the higher number");  //setting
-        int higher = choice.nextInt();
+	System.out.println("Please Choose either user guessing game or computer guessing game."); //Greeting
+	System.out.println("Enter 'User' for user guessing game, 'Computer' for computer guessing game");  //Greeting
+	Scanner choice = new Scanner(System.in); //input
+	String game = choice.nextLine().toLowerCase();
+	System.out.println("Please Enter the lower number");  //setting
+	int lower = choice.nextInt();
+	System.out.println("Please Enter the higher number");  //setting
+	int higher = choice.nextInt();
 	if(game.equals("computer"))
         {
             guessAI(lower, higher);
