@@ -27,7 +27,7 @@ public class Main {
     public static void randomNumGen(int lower, int higher) {
         System.out.println("Game Begin");
         int rand = (int) (Math.random() * higher) + lower;
-        System.out.println("Guess a number from 0 - 100");
+        System.out.println("Guess a number from " + lower + " - " + higher);
         Scanner guess = new Scanner(System.in);
         while ((guess.nextInt() != rand)) {
             System.out.println("Wrong number, try again.");
